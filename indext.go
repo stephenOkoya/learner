@@ -1,2 +1,9 @@
-#!/bin/bash
-echo "hello sokoya"
+package main
+
+import "fmt"
+
+func main() {
+
+	fmt.Print("hello world")
+	fmt.Print("dont you")
+}
