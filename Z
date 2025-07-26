@@ -1,0 +1,10 @@
+#echo "R" > Z
+#cat -e Z
+#--------------------
+#echo "R": outputs the letter R
+
+#>: writes the output into a file (overwrites if it exists)
+
+#Z: the name of the file
+
+R
