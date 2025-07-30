@@ -1,0 +1,61 @@
+Question: PrintNbrBase
+Objective:
+Write a function PrintNbrBase(nbr int, base string) that converts and prints an integer number (nbr) in a given custom base, using only z01.PrintRune.
+
+Function Signature:
+go
+
+func PrintNbrBase(nbr int, base string)
+
+ Expected Behavior:
+Convert the given integer nbr into the number system represented by the characters in base.
+
+Print the result using only characters from base.
+
+The base must be valid:
+
+It must contain at least two characters.
+
+All characters must be unique.
+
+It must not contain + or -.
+
+Example Calls from main:
+go
+
+PrintNbrBase(125, "0123456789")         // Output: 125
+PrintNbrBase(-125, "01")                // Output: -1111101
+PrintNbrBase(125, "0123456789ABCDEF")   // Output: 7D
+PrintNbrBase(-125, "choumi")            // Output: -ommi
+PrintNbrBase(125, "aa")                 // Output: NV
+PrintNbrBase(-9223372036854775808, "0123456789") // Output: -9223372036854775808
+
+ Constraints:
+You must only use z01.PrintRune for output.
+
+You must validate the base before using it:
+
+Must be at least 2 characters long.
+
+Must not contain duplicates.
+
+Must not contain '+' or '-'.
+
+If the base is invalid, print:
+
+nginx
+
+NV
+
+You must handle negative numbers by prepending '-'.
+
+For nbr == 0, print '0'.
+
+For the edge case -9223372036854775808 (most negative int64), print the absolute value directly as a string (as division may overflow).
+
+Hints:
+Convert the number by repeated division and modulo by the base length.
+
+Build the result by storing digits in reverse, then printing in correct order.
+
+You may use helper functions (like printstr) to print strings one character at a time.

@@ -1,0 +1,42 @@
+ Question: Swap
+Objective:
+Write a function Swap that exchanges the values of two integers using pointers.
+
+✅ Function Signature:
+go
+
+func Swap(a *int, b *int)
+🧪 Example Usage:
+Given the following code in main:
+
+go
+
+a := 0
+b := 1
+Swap(&a, &b)
+fmt.Println(a)
+fmt.Println(b)
+The output should be:
+
+1
+0
+📌 Requirements:
+You must use pointers to swap the values — no return values allowed.
+
+The function should modify the original values of a and b by dereferencing the pointers.
+
+You can use tuple assignment or a temporary variable.
+
+🧠 Hints:
+With tuple assignment:
+
+go
+
+*a, *b = *b, *a
+Or with a temporary variable:
+
+go
+
+temp := *a
+*a = *b
+*b = temp

@@ -30,6 +30,8 @@
 # List visible files sorted by access time and format output
 ##ls -1ut --time=atime | grep -v '^\.' | tac | paste -sd ',' -
 
+
+#FINAL CODE
 # Print a message
 echo "Having the directories end with a /"
 ls -1ut --time=atime | grep -v '^\.' | tac | while read item; do

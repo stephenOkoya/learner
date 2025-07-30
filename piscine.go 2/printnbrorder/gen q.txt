@@ -1,0 +1,62 @@
+ Question: PrintNbrInOrder
+Objective:
+Write a function PrintNbrInOrder(n int) that prints the digits of a non-negative integer n in ascending order using only z01.PrintRune.
+
+✅ Function Signature:
+go
+Copy
+Edit
+func PrintNbrInOrder(n int)
+🧪 Expected Output:
+Given the following code in main:
+
+go
+
+PrintNbrInOrder(321)
+PrintNbrInOrder(0)
+PrintNbrInOrder(321)
+The output will be:
+
+1230123
+📌 Rules and Constraints:
+You must not use any packages other than github.com/01-edu/z01.
+
+You must only use z01.PrintRune for all character output.
+
+The function should:
+
+Ignore negative input values (print nothing if n < 0)
+
+Print '0' if n == 0
+
+Print the digits of n in ascending order if n > 0
+
+Sorting must be done manually (no built-in sort).
+
+You may use basic algorithms like bubble sort to sort digits.
+
+🧠 Hints:
+Use n % 10 and n / 10 to extract individual digits.
+
+Convert digits to characters using:
+
+go
+
+char := rune(digit + '0')
+Use a slice of runes to store and sort the digits.
+
+Sort the digits with a simple nested loop (like bubble sort).
+
+Print the sorted digits using a loop and z01.PrintRune.
+
+
+
+
+
+
+
+
+
+
+
+

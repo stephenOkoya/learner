@@ -1,0 +1,28 @@
+🧩 Question: PrintComb2
+Objective:
+Write a function PrintComb2 that prints all unique combinations of two different two-digit numbers in ascending order.
+
+Each number pair must meet the following conditions:
+
+The first number must be less than the second.
+
+The output must be in the format: 00 01, 00 02, ..., 98 99
+
+Each combination is separated by a comma and a space.
+
+The last combination (98 99) should not be followed by a comma.
+
+A newline (\n) should be printed at the end.
+
+🧪 Expected Output:
+
+00 01, 00 02, 00 03, ..., 98 99
+
+ Constraints:
+You must use runes only ('0' to '9') and z01.PrintRune.
+
+Casting is allowed only for arithmetic, not for string formatting.
+
+You must not use any packages except github.com/01-edu/z01.
+
+You are not allowed to use string formatting (fmt.Printf, etc.).

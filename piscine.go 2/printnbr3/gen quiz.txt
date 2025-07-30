@@ -1,0 +1,58 @@
+🧩 Question: PrintNbr (Recursive)
+Objective:
+Write a function PrintNbr that prints an integer (int) number using only z01.PrintRune. The number must be printed digit by digit in the correct order, using recursion, and must handle negative values, zero, and positive values.
+
+🧪 Expected Output:
+Given this code in main:
+
+go
+
+PrintNbr(-123)
+PrintNbr(0)
+PrintNbr(123)
+z01.PrintRune('\n')
+
+The output should be:
+
+diff
+
+-1230123
+
+ Function Signature:
+go
+
+func PrintNbr(n int)
+
+Requirements:
+You must not use packages like fmt, strconv, or any other output/formatting library.
+
+You must only use z01.PrintRune to display characters.
+
+You must use recursion to handle the digit-by-digit printing.
+
+You must handle:
+
+Negative numbers (e.g., -456)
+
+Zero (0)
+
+Positive numbers (e.g., 789)
+
+A newline (\n) should be printed in the main function, not inside PrintNbr.
+
+ Hints:
+You can extract the last digit using:
+
+go
+
+digit := n % 10
+To convert a digit to a rune character, use:
+
+go
+
+z01.PrintRune(rune(digit + '0'))
+Recursive printing means:
+
+Call the function with n / 10
+
+Print the digit from n % 10 after the recursive call (to maintain order)

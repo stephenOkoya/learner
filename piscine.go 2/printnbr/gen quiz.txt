@@ -1,0 +1,36 @@
+🧩 Question: PrintNbr
+Objective:
+Write a function PrintNbr(n int) that prints an integer number (n) using only runes and the z01.PrintRune function.
+
+This function should:
+
+Print positive and negative integers correctly.
+
+Handle 0 as a special case and print it properly.
+
+Always print a minus sign (-) before negative numbers.
+
+Print the number digit by digit without using any type casting for string conversion.
+
+After all numbers are printed, a newline (\n) should be printed.
+
+🧪 Expected Output:
+
+-1230123
+(Note: This is from PrintNbr(-123), PrintNbr(0), and PrintNbr(123) called in main())
+
+Constraints:
+You must not use fmt.Print, strconv, or string casting like string(n).
+
+You must only use runes and z01.PrintRune to build the output.
+
+You are allowed to use helper functions (like PrintPositiveNum) to split and print each digit.
+
+You may use integer math (e.g., n / 10, n % 10) and arithmetic on runes (e.g., starting from '0' and incrementing it).
+
+The function must work for all integers, including negatives and zero.
+
+ Function Signature:
+go
+
+func PrintNbr(n int)

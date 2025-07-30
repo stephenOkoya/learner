@@ -1,0 +1,53 @@
+ Question: SwapBits
+Objective:
+Write a function SwapBits that swaps the first 4 bits and the last 4 bits of a byte.
+
+✅ Function Signature:
+go
+
+func SwapBits(octet byte) byte
+🧪 Example Usage:
+Given the following code:
+
+go
+
+myByte := byte(0b10101101)
+fmt.Printf("before swap: %b\n", myByte)
+fmt.Printf("After swap : %b\n", SwapBits(myByte))
+The output will be:
+
+yaml
+
+before swap: 10101101
+After swap : 11011010
+📌 Explanation:
+A byte is 8 bits. In this case: 10101101
+
+The function must swap the left 4 bits (1010) with the right 4 bits (1101), resulting in: 11011010
+
+💡 Requirements:
+You must use bitwise operators:
+
+>> and << for shifting bits
+
+& for masking
+
+| for combining results
+
+You must not use strings, slices, or math libraries.
+
+🧠 Hints:
+Right-shifting by 4 gets the left nibble:
+
+go
+
+left := octet >> 4
+Masking with 15 (0b00001111) gets the right nibble:
+
+go
+
+right := octet & 15
+Shift right nibble to the left side and combine:
+
+go
+swapped := (right << 4) | left

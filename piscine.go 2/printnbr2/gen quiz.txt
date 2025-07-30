@@ -1,0 +1,55 @@
+ Question: PrintNbr2
+Objective:
+Write a function PrintNbr2 that prints an integer number to the standard output using only z01.PrintRune. The number must be printed digit by digit as characters, handling both positive and negative values, including zero.
+
+🧪 Expected Output:
+
+Given the following code in main:
+
+go
+
+PrintNbr2(-123)
+PrintNbr2(0)
+PrintNbr2(123)
+z01.PrintRune('\n')
+
+Your program should print:
+
+diff
+
+-1230123
+
+func PrintNbr2(n int)
+
+Requirements:
+You must not use any external packages like fmt, strconv, etc.
+
+You must only use z01.PrintRune to print characters.
+
+You may build strings manually or convert digits to characters using ASCII math.
+
+You must handle:
+
+Negative numbers (e.g., -42)
+
+Zero (0)
+
+Positive numbers (e.g., 89)
+
+A newline (\n) is printed after all numbers, from main, not inside the function.
+
+🧠 Hints:
+You can extract digits with % 10, and reduce the number with / 10.
+
+Convert digits to runes using:
+
+go
+
+digitRune := digit + '0'
+To print the digits in the correct order, you may:
+
+Build the result as a string (e.g., in reverse then flip), or
+
+Use a recursive approach (like the commented printnum example).
+
+Let me know if you'd like an alternate version of the question using recursion instead of string building.

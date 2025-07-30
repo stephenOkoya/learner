@@ -1,0 +1,43 @@
+Question: UltimatePointOne
+Objective:
+Write a function UltimatePointOne that takes a triple pointer to an integer and sets the value pointed to by it to 1.
+
+✅ Function Signature:
+go
+
+func UltimatePointOne(n ***int)
+🧪 Example Usage:
+Given the following code in main:
+
+go
+
+a := 0
+b := &a
+n := &b
+UltimatePointOne(&n)
+fmt.Println(a)
+The expected output is:
+1
+
+📌 Requirements:
+You must use pointers (no return values).
+
+You must set the value at the innermost pointer to 1.
+
+The function should directly modify the original integer variable passed through three levels of indirection.
+
+🔁 Explanation:
+a is an integer.
+
+b is a pointer to a.
+
+n is a pointer to b.
+
+UltimatePointOne(&n) receives a pointer to n (which is a ***int).
+
+The function must assign 1 to the memory location originally held by a.
+
+🧠 Hints:
+Use ***n = 1 to dereference three times and assign the value.
+
+You’re modifying the original variable a through indirect access.

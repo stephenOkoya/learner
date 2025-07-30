@@ -1,0 +1,21 @@
+ Question: PrintComb
+Objective:
+Write a function PrintComb that prints all unique combinations of three different digits (0 to 9) in ascending order, separated by a comma and a space.
+
+Only combinations where the first digit is less than the second, and the second is less than the third should be printed.
+
+The combinations must appear in ascending order based on numerical value.
+
+The output should be followed by a newline ('\n') at the end.
+
+The last combination (789) should not be followed by a comma.
+
+🧪 Expected Output:
+012, 013, 014, 015, 016, 017, 018, 019, 023, 024, 025, 026, 027, 028, 029, 034, ..., 789
+
+ Constraints:
+You must not use any package other than z01.
+
+You are not allowed to use casting (e.g., string(i) or int(rune)).
+
+Use only runes and z01.PrintRune.

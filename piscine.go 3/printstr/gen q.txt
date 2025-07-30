@@ -1,0 +1,39 @@
+Question: PrintStr
+Objective:
+Write a function PrintStr that takes a string and prints it character by character, followed by a newline (\n), using only z01.PrintRune.
+
+✅ Function Signature:
+go
+
+func PrintStr(s string)
+🧪 Example Usage:
+Given the following code in main:
+
+go
+
+PrintStr("Hello World!")
+The output should be:
+
+nginx
+
+Hello World!
+📌 Requirements:
+You must not use any package other than github.com/01-edu/z01.
+
+You must print each character of the string individually using z01.PrintRune.
+
+You must print a newline (\n) after the full string.
+
+🧠 Hints:
+Use a for loop to iterate over the string:
+
+go
+
+for _, char := range s {
+    z01.PrintRune(char)
+}
+Add a newline at the end with:
+
+go
+
+z01.PrintRune('\n')

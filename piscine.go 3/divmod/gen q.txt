@@ -1,0 +1,42 @@
+Question: DivMod
+Objective:
+Write a function DivMod that computes the quotient and remainder of two integers and stores the results using pointers.
+
+✅ Function Signature:
+go
+
+func DivMod(a int, b int, div *int, mod *int)
+🧪 Example Usage:
+Given the following code in main:
+
+go
+
+a := 13
+b := 2
+var div int
+var mod int
+DivMod(a, b, &div, &mod)
+fmt.Println(div)
+fmt.Println(mod)
+The output should be:
+
+6
+1
+📌 Requirements:
+The function should calculate:
+
+The quotient of a divided by b and store it at *div.
+
+The remainder of a divided by b and store it at *mod.
+
+Do not return any value — only modify the values through the provided pointers.
+
+🧠 Hints:
+Use Go’s division (/) and modulus (%) operators.
+
+Assign values through pointers:
+
+go
+
+*div = a / b
+*mod = a % b

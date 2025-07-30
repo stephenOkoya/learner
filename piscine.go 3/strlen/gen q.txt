@@ -1,0 +1,36 @@
+Question: StrLen
+Objective:
+Write a function StrLen that returns the number of characters (runes) in a given string.
+
+✅ Function Signature:
+go
+
+func StrLen(s string) int
+🧪 Example Usage:
+Given the following code in main:
+
+go
+
+l := StrLen("Hello World!")
+n := StrLen("He!îo")
+fmt.Println(l)
+fmt.Println(n)
+The output will be:
+
+12
+5
+📌 Requirements:
+The function must count the number of Unicode characters (runes) in the string.
+
+You must not use len(s) as it counts bytes, not runes.
+
+Use a for range loop to correctly count multibyte characters (e.g., î).
+
+🧠 Hints:
+A for range loop on a string iterates over its runes (characters), not bytes:
+
+go
+
+for range s {
+    count++
+}
